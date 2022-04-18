@@ -1,0 +1,696 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --pFontHead: "Great Vibes", cursive;
+    --pFontPara: 'Dosis', sans-serif;
+    --pCommon-BGcolor: rgba(94, 154, 142, 0.3);
+    --pCommon-color: #5e9a8e;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------customising scroll bar----------- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--pCommon-color); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--pCommon-BGcolor); 
+  }
+/* ---------customising scroll bar end-------- */
+
+
+/* ==========scroll up button start here========== */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--pCommon-color);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+/* ==========scroll up button end here========== */
+
+
+/* ==========hero section start here========== */
+.hero__section {
+    height: 90vh;
+}
+
+
+/* swiper start */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-prev {
+    left: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-next {
+    right: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__section:hover .swiper-button-prev{
+    left: 20px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hero__section:hover .swiper-button-next{
+    right: 20px;
+    visibility: visible;
+    opacity: 1;
+}
+
+  .swiper-button-prev, .swiper-button-next {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--pCommon-BGcolor);
+    box-shadow: 0 0 0 5px rgb(94 154 142 / 90%);
+}
+
+.swiper-button-prev:after, .swiper-button-next::after {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+  /* swiper end */
+
+.vibes__font {
+    font-family: var(--pFontHead);
+    font-size: 90px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    /* text-shadow: 1px 1px 2px rgb(0 0 0 / 60%); */
+    color: var(--pCommon-color);
+}
+
+h4.vibes__font {
+    font-size: 50px !important;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h5.vibes__font{
+    font-size: 30px !important;
+    margin: 0;
+}
+
+.married__text h4 {
+    font-family: var(--pFontPara);
+    font-size: 26px;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    border-top: 2px solid var(--pCommon-color);
+    border-bottom: 2px solid var(--pCommon-color);
+    color: var(--pCommon-color);
+    padding: 12px 20px;
+    display: inline;
+}
+/* ==========hero section end here========== */
+
+
+/* ==========menu section start here========== */
+.menu__section{
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky{
+    position: fixed;
+    width: 100%;
+    background-color: #f9f9f9;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.menu__section::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 1px;
+    left: 0;
+    background-color:lightgray;
+}
+
+.menu__section .pc__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc__menu .logo h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.pc__menu .logo h1 a {
+    text-decoration: none;
+    color: #5e9a8e;
+    display: flex;
+    align-items: center;
+}
+
+.menu__section .pc__menu .menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__section .pc__menu .menu ul li {
+    list-style: none;
+}
+
+.menu__section .pc__menu .menu ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 35px 17px;
+    display: block;
+    text-decoration: none;
+    color: #777;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu__section .pc__menu .menu ul li a:hover{
+    color: #5e9a8e;
+}
+
+.menu__section .menu__bar{
+    display: none;
+}
+
+.menu__section .menu__bar svg.svg-inline--fa.fa-bars {
+    color: var(--pCommon-color);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* mobile menu start */
+.mobile__menu {
+    display: none;
+    top: 0;
+    right: -390px;
+    z-index: 99;
+    position: fixed;
+    width: 38%;
+    height: 100vh;
+    background-color: #fff;
+    border-left: 1px solid var(--pCommon-color);
+    transition: all 0.6s ease-in-out;
+}
+
+/* -------------------------- */
+.open{
+    top: 0;
+    right: 0;
+}
+/* -------------------------- */
+
+.mobile__menu svg.svg-inline--fa.fa-xmark {
+    position: absolute;
+    top: 11px;
+    left: -16px;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: var(--pCommon-color);
+    height: 30px;width: 30px;
+    color: #fff;
+}
+
+.mobile__menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.mobile__menu ul li {
+    list-style: none;
+    border-bottom: 1px solid lightgray;
+}
+
+.mobile__menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 40px;
+    color: var(--pCommon-color);
+}
+
+/* mobile menu end */
+
+/* ==========menu section end here============ */
+
+/* ==========couple section start here======== */
+.couple__section{
+    margin-top: 80px;
+}
+.couple__inner .title h1 {
+    display: inline-block;
+    /* margin: 0; */
+}
+
+.couple__inner .title {
+    text-align: center;
+}
+
+.image__section img {
+    width: 100%;
+}
+
+/* .couple__section .details  */
+p {
+    font-family: var(--pFontPara);
+    line-height: 34px;
+    font-size: 18px;
+    color: #767878;
+    word-spacing: 4px;
+}
+
+.couple__section .details h4{
+    font-family: var(--pFontPara);
+}
+
+.couple__section .details .couple__name{
+    text-align: right;
+    font-size: 30px;
+    font-family: var(--pFontHead);
+    font-weight: 500;
+    color: var(--pCommon-color);
+    letter-spacing: 4px;
+}
+
+.couple__section .details {
+    text-align: justify;
+    background-color: var(--pCommon-BGcolor);
+    /* height: 440px; */
+    padding: 78px;
+}
+/* ==========couple section end here========== */
+
+/* ==========big day section start here=======  */
+.bigday__section{
+    padding: 80px 0;
+    background-image: linear-gradient(rgba(4,9,30,0.4), rgba(4,9,30,0.4)), url(../image/groom-putting-ring-bride-s-finger.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.bigday__inner{
+    text-align: center;
+}
+
+.bigday__inner p {
+    font-family: var(--pFontPara);
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/*countdown section start */
+.countdown__section {
+    padding: 140px 0px 100px;
+}
+
+.countdown__section {
+    padding: 80px 0;
+}
+
+.countdown__inner table.table {
+    font-family: var(--pFontPara);
+}
+/*countdown section end*/
+/* ==========big day section end here=========  */
+
+/* ==========story section start here========== */
+.story__section {
+    margin: 100px 0;
+}
+
+.story__section .story__inner {
+    position: relative;
+}
+
+.story__section .story__inner::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(94, 154, 142, 0.1);
+}
+
+.story__section .title {
+    margin-bottom: 60px;
+}
+
+.title h4 {
+    border-top: 2px solid rgba(94, 154, 142, 0.1);
+    border-bottom: 2px solid rgba(94, 154, 142, 0.1);
+    color: #848383;
+    padding: 10px 25px 5px;
+    background-color: rgba(94, 154, 142, 0.1);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.story__inner .row .col-md-6:first-child {
+    padding: 45px 45px 0px 100px;
+}
+
+.story__inner > .row > .col-md-6:last-child {
+    padding: 45px 100px 50px 50px;
+}
+
+.story__inner .story__text h5 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--pFontPara);
+    color: var(--pCommon-color);
+}
+
+.story__inner .story__text .date {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: var(--pFontPara);
+}
+
+.story__inner .catch-bg .imagination{
+    position: relative;
+}
+
+.story__inner .catch-bg .imagination svg.svg-inline--fa.fa-heart {
+    font-size: 21px;
+    position: absolute;
+    left: -72px;
+    bottom: -72px;
+    padding: 10px;
+    border: 2px solid rgba(94, 154, 142, 0.5);
+    background-color: #9cc2bb;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 99;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+    
+.story__inner .catch-bg .imagination  svg.svg-inline--fa.fa-heart:hover{
+    transform: rotate(360deg);
+    color: #9cc2bb;
+    background-color: #fff;
+}
+
+.story__inner .image__section img {
+    height: 377px;
+    max-width: 555px;
+    background-position: center;
+    background-size: cover;
+}
+
+.image__section {
+    position: relative;
+}
+
+  
+/* ==========story section end here============ */
+
+/* ==========gallery section start here======== */
+ .gallery_section img{
+      max-height: 317px;
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+  }
+
+  .img_inner a img {
+  width: 100%;
+  height: 276px;
+  }
+
+/* ==========gallery section end here======== */
+
+/*==========wedding event section start========== */
+.event__section {
+    padding: 100px 0;
+}
+
+.event__inner .title span {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--pCommon-color);
+}
+
+.event__inner ul {
+    padding: 0;
+    margin: 0;
+}
+
+.event__inner ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.event__inner ul li svg.svg-inline--fa.fa-clock, .svg-inline--fa.fa-location-dot{
+    color: var(--pCommon-color);
+}
+
+.event__inner ul li p {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.event__inner p.para {
+    padding: 15px 0;
+}
+
+.event__inner a {
+    text-decoration: none;
+    color: var(--pCommon-color);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.event__inner a svg.svg-inline--fa.fa-angle-right {
+    padding-left: 13px;
+}
+
+.wedding__party {
+    margin-top: 40px;
+}
+/* ==========wedding event section end========== */
+
+/* ==========invitation section start here========== */
+.invitation__inner form #name,
+ #email,
+  #guest,
+   #form__control {
+    width: 100%;
+    padding: 9px;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: unset;
+    border: none;
+}
+
+.invitation__section{
+    padding: 100px 0;
+}
+
+.invitation__inner form{
+    max-width: 800px;
+    margin: auto;
+    font-family: var(--pFontPara);
+}
+
+.invitation__inner form p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.invitation__inner form ::placeholder{
+    color: #fff;
+}
+
+.invitation__inner form input, select, textarea{
+    background-color: var(--pCommon-BGcolor);
+    color: #fff;
+}
+
+.invitation__inner select#form__control {
+    color: #fff;
+    background-color: var(--pCommon-BGcolor);
+}
+
+.invitation__inner form button {
+    max-width: 162px;
+    padding: 12px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    margin: auto;
+    background-color: var(--pCommon-BGcolor);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+/* ==========invitation section end here========== */
+
+/* ==========wishes section start here=========== */
+.friends__wishes{
+    padding: 100px 0;
+}
+
+.wisher__inner .wisher__section img {
+    width: 100px;
+}
+
+.wisher__section img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+
+}
+
+.wisher__section span {
+    font-size: 27px;
+}
+
+.wisher__section p {
+    max-width: 470px;
+    padding: 40px 0;
+}
+
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--pCommon-color);
+}
+
+span.swiper-pagination-bullet {
+    background-color: green;
+}
+/* ==========wishes section start here=========== */
+
+/* ==========footer section start here========== */
+.footer__inner.text-center .footer__title {
+    padding: 100px 0;
+}
+
+
+.footer__inner.text-center .footer__title h4,
+ .footer__inner.text-center .footer__title p,
+  .footer__inner .copyright p {
+    color: #fff;
+    /* color: var(--pCommon-color); */
+}
+
+.footer__inner .copyright .social__section ul {
+    display: flex;
+    max-width: 200px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.footer__inner .copyright .social__section ul li {
+    list-style: none;
+}
+
+.footer__inner .copyright .social__section ul li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer__inner .copyright {
+    padding-bottom: 50px;
+}
+/* ==========footer section start here========== */
